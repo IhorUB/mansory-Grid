@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 35px;
+    padding: 20px;
+    grid-auto-rows: 40px;
+}
+
+.testimonials .comment-item {
+    margin-top: 3rem;
+}
+
+.testimonials .comment-item .comment-box {
+    position: relative;
+    padding: 70px 30px 30px;
+    transition: 0.5s;
+    text-align: center;
+    background: #fff;
+    border-left: 3px solid #28b8d8;
+}
+
+.testimonials .comment-item .comment-box:hover {
+    background: rgba(21, 21, 21, 0.75);
+}
+
+.testimonials .comment-item .comment-box p {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.testimonials .comment-item .comment-box h5 {
+    margin: 20px 0 0;
+    padding: 0;
+    transition: 0.5s;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 20px;
+    color: #28b8d8;
+}
+
+.testimonials .comment-item .comment-box h5 span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #28b8d8;
+    transition: 0.5s;
+}
+
+.testimonials .comment-item .comment-box:hover p {
+    color: #fff;
+}
+
+.testimonials .comment-item .comment-box .user-img {
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    width: 120px;
+    height: 120px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .comment-item .comment-box:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: url(black-up.png);
+    background-size: cover;
+    opacity: 0.05;
+    transition: 0.5s;
+}
+
+.testimonials .comment-item .comment-box:hover:before {
+    transform: translateY(-60px);
+    opacity: 0.7;
+}
+
+.testimonials .comment-item .comment-box:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background: url(black-up.png);
+    background-size: cover;
+    opacity: 0.05;
+    transition: 0.5s;
+    transform: rotate(180deg) translateY(0px);
+}
+
+.testimonials .comment-item .comment-box:hover:after {
+    transform: rotate(180deg) translateY(-60px);
+    opacity: 0.7;
+}
